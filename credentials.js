@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require("express")
 const PORT = process.env.PORT || 3001
 const app = express()
-// const routes = require("./routes")
+const routes = require("./routes")
 
 
 // Fetch config file for instantiating SDK instance
@@ -17,7 +17,11 @@ const client = sdk.getAppAuthClient('enterprise');
 app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(routes)
+app.use(routes)
+
+clientId()
+downscopeToken()
+
 
 function getAllClient() {
   client.users.get(client.CURRENT_USER_ID)
@@ -62,6 +66,38 @@ function addClient() {
     .then(appUser => {
       console.log("hi ", appUser)
     });
+}
+
+function clientId() {
+  client._useIterators = true;
+
+  client.enterprise.getUsers({ limit: 1000 })
+    .then((usersIterator) => {
+      return autoPage(usersIterator);
+    })
+    .then((collection) => {
+      let a = (collection);
+      console.log(a)
+      // uploadFilePromise(a)
+    });
+
+  function autoPage(iterator) {
+    let collection = [];
+    let moveToNextItem = () => {
+      return iterator.next()
+        .then((item) => {
+          if (item.value) {
+            collection.push(item.value);
+          }
+          if (item.done !== true) {
+            return moveToNextItem();
+          } else {
+            return collection;
+          }
+        })
+    }
+    return moveToNextItem();
+  }
 }
 
 function downscopeToken(){
