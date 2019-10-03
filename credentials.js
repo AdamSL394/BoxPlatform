@@ -14,3 +14,7 @@ const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 
 const client = sdk.getAppAuthClient('enterprise');
 
+app.use(express.static("app"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(routes)
