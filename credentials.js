@@ -101,7 +101,7 @@ function clientId() {
 }
 
 function downscopeToken(){
-  const scopes = 'base_preview item_download';
+  const scopes = 'base_preview item_download base_upload';
   // const folderId = 'FOLDER ID'
   const resource =  null//`https://api.box.com/2.0/folders/${folderId}`
   
