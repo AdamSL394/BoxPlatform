@@ -21,12 +21,20 @@
 
 
     <script>
-      	var folderId = '0';
-      	var accessToken = '1!3iYqpEwZxXux3R21JgFt_YDk5teeHHE-AkDBNO7sow48DrHlO6muN4uMLTsd7w4q6D0EHnJZWRgzNivsqdcJ4KytMZPWMVwub1oTvnCF0nlVaFHpaSefV6mynh-sYmuQyOTZ8e-Vx04WL4YGIfLJh_WYiKY2QR1K7DPE_Mcb6E2gBo_C0wthJ4I5e1zjMO3cFXxwOKyONY5OMofJgkH1CtWu5tcYxAaUf3G4jWqMFK0c2gV-0xpOzXUNFFxFtbNUZhAB_ep9MyjyRq-ezOo3KjZsjqSZ090JnfCO0_u7e-Ya2EGiUJp9Z3pWQmi5KzziIQ2p8sYqAODKJcixi876gz7_WMgOk1IKA8XkYaRSJfHlSNx7J0smPBJ04mCTG07dp-TRsGUfJ4g19xpjVaUKfWCDOctjwptlRohNbA';
-      	var contentExplorer = new Box.ContentExplorer();
-      	contentExplorer.show(folderId, accessToken, {
-            container: '.container'
-        });
+
+    // function calltogetAccessToken(req,res){
+
+        $(document).on("ready",function(req,res){
+            
+            var folderId = '0';
+            var accessToken = '1!3iYqpEwZxXux3R21JgFt_YDk5teeHHE-AkDBNO7sow48DrHlO6muN4uMLTsd7w4q6D0EHnJZWRgzNivsqdcJ4KytMZPWMVwub1oTvnCF0nlVaFHpaSefV6mynh-sYmuQyOTZ8e-Vx04WL4YGIfLJh_WYiKY2QR1K7DPE_Mcb6E2gBo_C0wthJ4I5e1zjMO3cFXxwOKyONY5OMofJgkH1CtWu5tcYxAaUf3G4jWqMFK0c2gV-0xpOzXUNFFxFtbNUZhAB_ep9MyjyRq-ezOo3KjZsjqSZ090JnfCO0_u7e-Ya2EGiUJp9Z3pWQmi5KzziIQ2p8sYqAODKJcixi876gz7_WMgOk1IKA8XkYaRSJfHlSNx7J0smPBJ04mCTG07dp-TRsGUfJ4g19xpjVaUKfWCDOctjwptlRohNbA';
+            var contentExplorer = new Box.ContentExplorer();
+            contentExplorer.show(folderId, accessToken, {
+              container: '.container'
+          });
+          console.log(res)
+        })
+    // }
 </script>
 
 
