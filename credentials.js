@@ -56,6 +56,29 @@ function createAppUser() {
     // console.log(res)
   }
 }
+
+function addClient() {
+  client.enterprise.addAppUser('Daenerys Targaryen', { external_app_user_id: 'external-id' })
+    .then(appUser => {
+      console.log("hi ", appUser)
+    });
+}
+
+function downscopeToken(){
+  const scopes = 'base_preview item_download';
+  // const folderId = 'FOLDER ID'
+  const resource =  null//`https://api.box.com/2.0/folders/${folderId}`
+  
+  // Perform token exchange to get downscoped token
+  client.exchangeToken(scopes, resource).then((tokenInfo) => {
+    // Downscoped token available in tokenInfo.accessToken
+    console.log(tokenInfo.accessToken)
+  }).catch((err) => {
+    console.error(err);
+   
+  });
+  }
+
 app.listen(PORT, () => {
   console.log("App running on port " + PORT + "!");
 })
