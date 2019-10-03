@@ -1,7 +1,7 @@
 const boxSDK = require('box-node-sdk');
 const fs = require('fs');
 const express = require("express")
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3001
 const app = express()
 // const routes = require("./routes")
 
@@ -17,7 +17,7 @@ const client = sdk.getAppAuthClient('enterprise');
 app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(routes)
+// app.use(routes)
 
 function getAllClient() {
   client.users.get(client.CURRENT_USER_ID)
