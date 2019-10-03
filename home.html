@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8" />
+    <title>Box Content Explorer Demo</title>
+
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=es6,Intl"></script>
+  
+
+
+    <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/explorer.css" type="text/css">
+    <link rel="stylesheet" href="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.css" />
+</head>
+<body>
+    <div class="container" style="height:600px">
+       
+    </div>
+
+    <div class="glass" style="height:600px">
+       
+    </div>
+
+    <script src="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js"></script>
+    <script src="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/explorer.js"></script>
+
+
+    <script>
+      	var folderId = '0';
+      	var accessToken = '1!qIQPGj6BGm3snSSDr7xMrXM--ZbgQWpC8YNKoIu80uI_5gFF047LUw-Wnpv95121PCHGR3StyBH03OsPTymqVcZoA1GS6-M9TccJP49NP5VHh6OB1TTD7p5dkSdLrjKyonCdR4taKdc1B1pST_qi7xhvx8PLteHLSRAlkiDNRWgI05kBgjAsU8lopqmWGYONn8RWB0KtBVQcTTpzOnpF2B_UrxgHY1Fwgs6BmYuY1q-Kguy_0XfLieb3WlC_B2tQCeBaag8CKoQJX2TQinSDLUoA0G8aFVzDRmU1dlmYRPoISHd0NG1NakUr1A6ZfDBgNXBrxBiZ-WS1-Bwsne8FWGAOUghnB_D7HYr_gbzzcJHzD6K18NrUM2SqVpNNQMDg';
+      	var contentExplorer = new Box.ContentExplorer();
+      	contentExplorer.show(folderId, accessToken, {
+            container: '.container'
+        });
+    
+    var folderId = '0';
+    var accessToken = '1!qIQPGj6BGm3snSSDr7xMrXM--ZbgQWpC8YNKoIu80uI_5gFF047LUw-Wnpv95121PCHGR3StyBH03OsPTymqVcZoA1GS6-M9TccJP49NP5VHh6OB1TTD7p5dkSdLrjKyonCdR4taKdc1B1pST_qi7xhvx8PLteHLSRAlkiDNRWgI05kBgjAsU8lopqmWGYONn8RWB0KtBVQcTTpzOnpF2B_UrxgHY1Fwgs6BmYuY1q-Kguy_0XfLieb3WlC_B2tQCeBaag8CKoQJX2TQinSDLUoA0G8aFVzDRmU1dlmYRPoISHd0NG1NakUr1A6ZfDBgNXBrxBiZ-WS1-Bwsne8FWGAOUghnB_D7HYr_gbzzcJHzD6K18NrUM2SqVpNNQMDg';
+    var uploader = new Box.ContentUploader();
+    uploader.show(folderId, accessToken, {
+      glass: '.glass'
+  });
+</script>
+
+
+</body>
+</html>
+
+
+

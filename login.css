@@ -1,0 +1,19 @@
+body{
+    background-color: lightgrey;
+    
+}
+.alert-light{
+    background-color: grey !important;
+    height:15px; 
+}
+
+ .glass{
+    width:20% !important;
+} 
+.container {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 320px;
+} 
