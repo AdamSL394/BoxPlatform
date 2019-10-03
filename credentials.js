@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require ("express")
 const PORT = process.env.PORT || 3000
 const app = express()
-const routes = require("./routes")
+// const routes = require("./routes")
 
 
 // Fetch config file for instantiating SDK instance
@@ -18,6 +18,14 @@ app.use(express.static("app"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes)
+
+function getAllClient() {
+    client.users.get(client.CURRENT_USER_ID)
+      .then(user => {
+        console.log('Hello', user.name, '!')
+        // .catch(err => console.log('Got an error!', err));
+      })
+  }
 
 app.listen(PORT, () => {
     console.log("App running on port " + PORT + "!");
