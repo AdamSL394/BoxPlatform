@@ -9,6 +9,7 @@ body{
 
  .glass{
     width:20% !important;
+    border: 2px solid black;
 } 
 .container {
     width: 100%;
@@ -17,3 +18,6 @@ body{
     padding: 0;
     min-width: 320px;
 } 
+.login{
+    color:white;
+}

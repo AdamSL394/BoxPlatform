@@ -2,11 +2,11 @@ var router = require("express").Router();
 var path = require("path");
 
 router.get("/", function(req, res){
-    res.sendFile(path.join(__dirname, "../../app/home.html"));
+    res.sendFile(path.join(__dirname, "../../app/login.html"));
 
 });
 
-router.get('/profile', function(req, res){
+router.get('/home', function(req, res){
     res.sendFile(path.join(__dirname, "../../app/home.html"));
 })
 
