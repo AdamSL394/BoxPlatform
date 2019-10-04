@@ -21,25 +21,27 @@
 
     <script src="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/uploader.js"></script>
     <script src="https://cdn01.boxcdn.net/platform/elements/10.1.0/en-US/explorer.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/core.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.min.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script>
 
         // function calltogetAccessToken(req,res){
 
-        // $(document).on("ready", function (req, res) {
-            // $.get("/", function (req,res) {
-            //     console.log(res)
+        $(document).on("ready", function (req, res) {
+         
+            $.get("/", function (req,res) {
+                console.log(res)
             // }).then(function (response) {
                 var folderId = '0';
-                var accessToken = '1!CIOuFQWIc2nsg8Nr7pwtASU3nqAAtpmlHxVnVrrQk3VRoQJVnVx2xB7YzjWrJT2nLILn3IqXcToF9Zi-1EUK-QzFABs3LVpIV362bv__uNme01hKfc1Mtt5ZjpYSQNB2VPIfY6TVroRPA4kF4ljvDONUunretXLDzD68bF-48i0belK6IOG5oDOshkeFdLmm8OTIAF9Cokv0YuJTFpOGMAVVKBzW4FZ7U0G145BqmHSExq1oQ6gOd3Q2IHupnBK2vxSW28LKtE3OSSG6oliPiRXYEBU8qX_YSbpqZPG6qxKevyprtuklpKf0oFTEwi6NusVNFe_RPoueZ-kQlOzBBSymZdZcPJ31ClQfs_29nH_078SP5Ej9chd7mB2WEDaRQ1gORF8X7sWsQKxpXYDkZQbPw0QXNdwM4dWSlQ';
+                var accessToken = '1!S5MeBiNlhAqI_ZTDPojZZRXgapRJmwWAB2pQzDW8lq3NHSxN5fbxPQfKOF5_uhupQayGfjmFQhVLJ82-9b3DbAAWVp2T8jTPfTo26r8YGWfHfWtacvYajW5olKwJT_1UEr_83mtXvo9B1rHjI1ao-GRacEAW1cQEnfu597cVzpTCLnBbNP-udoT_BmxnYYr2sXIMbYpRTszPF8jOdqTsBMG-jx6ckVBL2UOkj17uHCGwqAlEYWt-MWx9vUlt62PGpN_TGi711ayTqadeTTZU8hlr2Di70tOI58eNbjhf5E9ZEEUr9eNsSMMxv59UhToT0ym8U0Ae3aJnB-yLppe8GGj8Qtxenpb2hd6Df5VJWyOedJ6tU7gcSZZEwx1Z0928fVcAO27vcjigo-BqSKIFidtxTL7heqiL3hZYsmn0C4nZPvZ-X3rFGnVnt5Xm8QJ1vMa3gu1c78Y6pSiUkDe2_csUhnMu-eatgBtCO3lGybn4Az9NR3U_nz7r1XBcO6CSqvwUsdftYmMu5v7WpPnKgE64ZzVn1Z0cG8fOP3TJWZHLNTHdZQXOayj2ksQQLBvBijwXNqjUPDBsGgQSsA';//`${res.accesToken}`;
                 var contentExplorer = new Box.ContentExplorer();
                 contentExplorer.show(folderId, accessToken, {
                     container: '.container'
                 });
-                // console.log("1", res)
-            // })
-        // })
+               
+            })
+          console.log("1", res)
+        })
     // }
     </script>
 

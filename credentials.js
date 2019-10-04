@@ -1,13 +1,25 @@
-const boxSDK = require('box-node-sdk');
+
 const fs = require('fs');
 const express = require("express")
 const PORT = process.env.PORT || 3000
 const app = express()
 const routes = require("./routes")
-// Fetch config file for instantiating SDK instance
-const configJSON = JSON.parse(fs.readFileSync('./config.json'));
-// Instantiate instance of SDK using generated JSON config
-const sdk = boxSDK.getPreconfiguredInstance(configJSON);
+
+// const boxSDK = require('box-node-sdk');
+// const configJSON = JSON.parse(fs.readFileSync('./config.json'));
+// const sdk = boxSDK.getPreconfiguredInstance(configJSON);
+// const scopes = 'base_preview item_download base_upload';
+// const folderId = '0'
+// const resource = `https://api.box.com/2.0/folders/${folderId}`
+// const client = sdk.getAppAuthClient('enterprise');
+
+// client.exchangeToken(scopes, resource).then((tokenInfo) => { 
+//   let accessToken = (tokenInfo.accessToken)
+//   console.log(accessToken)
+//   return accessToken
+// }, callback).catch((err) => {
+//   console.error(err);
+// });
 
 
 app.use(express.static("client/app"));
@@ -88,33 +100,11 @@ function clientId() {
     return moveToNextItem();
   }
 }
-// function downscopeToken(req, res) {
-// app.get("/",(req,res) => {
-//   console.log("hi")
-  const scopes = 'base_preview item_download base_upload';
-  // const folderId = 'FOLDER ID'
-  const resource = null//`https://api.box.com/2.0/folders/${folderId}`
-  // Perform token exchange to get downscoped token
-  const client = sdk.getAppAuthClient('enterprise');
-  client.exchangeToken(scopes, resource).then((tokenInfo) => {
-    // Downscoped token available in tokenInfo.accessToken
-  
-    let accessToken = (tokenInfo.accessToken)
-    console.log(accessToken)
-    return accessToken
-  }, callback).catch((err) => {
-    console.error(err);
-  });
-  // }
-
-// })
-
 function callback(err, res) {
   console.log("hi")
   console.log(util.inspect(err, false, null));
   console.log(util.inspect("callback respose", res, false, null));
 }
-
 app.listen(PORT, () => {
   console.log("App running on port " + PORT + "!");
 })
