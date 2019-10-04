@@ -10,7 +10,7 @@ const configJSON = JSON.parse(fs.readFileSync('./config.json'));
 const sdk = boxSDK.getPreconfiguredInstance(configJSON);
 
 
-app.use(express.static("app"));
+app.use(express.static("client/app"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(routes)
@@ -89,8 +89,8 @@ function clientId() {
   }
 }
 // function downscopeToken(req, res) {
-app.get("/",(req,res) => {
-  console.log("hi")
+// app.get("/",(req,res) => {
+//   console.log("hi")
   const scopes = 'base_preview item_download base_upload';
   // const folderId = 'FOLDER ID'
   const resource = null//`https://api.box.com/2.0/folders/${folderId}`
@@ -100,14 +100,14 @@ app.get("/",(req,res) => {
     // Downscoped token available in tokenInfo.accessToken
   
     let accessToken = (tokenInfo.accessToken)
+    console.log(accessToken)
     return accessToken
   }, callback).catch((err) => {
     console.error(err);
   });
-  // res.send(accessToken)
   // }
 
-}
+// })
 
 function callback(err, res) {
   console.log("hi")
