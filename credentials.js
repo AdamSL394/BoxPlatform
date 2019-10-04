@@ -21,7 +21,10 @@ const routes = require("./routes")
 //   console.error(err);
 // });
 
+// app.set('views', './client/app');
+// app.set('view engine', 'pug');
 
+console.log("apppppp",app)
 app.use(express.static("client/app"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
