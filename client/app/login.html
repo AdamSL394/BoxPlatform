@@ -9,38 +9,98 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="login.css">
+
+    <script src="https://kit.fontawesome.com/86b979d5af.js"></script>
+
     <title>Bank Of Emerica</title>
 </head>
 
 <body>
-    <div class="alert alert-light" role="alert">
 
+
+    <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://media.brstatic.com/2018/01/22165942/bank-of-america-no-more-free-checking.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="https://orangecountysbdc.org/wp-content/uploads/sites/9/2017/12/Bank-of-America-Logo-vector-png-download.png" class="d-block w-100" alt="...">
+            </div>
+
+            <div class="container">
+                    <form class="glass">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1" class="d-flex justify-content-center">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                                else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1" class="d-flex justify-content-center">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-primary btnAlign"><a href="/home.html"
+                                class="login">Login</a></button>
+                        <button type="submit" class="btn btn-primary btnAlign"><a href="/home.html"
+                                class="login">Sign Up</a></button>
+                    </form>
+                </div>
+        </div>
+
+
+
+
+        
     </div>
-    
-    <form class="glass">
-
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
-                placeholder="Enter email">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <!-- Footer -->
+    <div class="card text-center bottom">
+        <span class="card-header">
+            <ul class="d-flex justify-content-center" style="list-style-type:none;">
+                <li class="li"><a id="footer_bofa_locations"
+                        href="https://locators.bankofamerica.com/locator/locator/LocatorAction.do">Locations</a></li>
+                <li class="li"><a id="footer_bofa_contactus" href="/contactus/contactus.go?request_locale=en_US">Contact
+                        Us</a></li>
+                <li class="li"><a id="footer_bofa_help" href="/help/overview.go?request_locale=en_US">Help</a></li>
+                <li class="li"><a id="footer_bofa_accessible_banking"
+                        href="/accessiblebanking/overview.go?request_locale=en_US">Accessible Banking</a></li>
+                <li class="li"><a id="footer_bofa_careers"
+                        href="http://careers.bankofamerica.com/careershome.aspx">Careers</a></li>
+                <li class="li"><a id="footer_bofa_privacy_and_security"
+                        href="/privacy/overview.go?request_locale=en_US">Privacy &amp; Security</a></li>
+                <li class="li"><a id="footer_bofa_mcafee_internet_security"
+                        href="/privacy/online-mobile-banking-privacy/mcafee-antivirus-free-trial.go?request_locale=en_US">McAfee<sup>®</sup></a>
+                </li>
+                <li class="li"><a id="footer_bofa_sitemap" href="/sitemap/personal.go?request_locale=en_US">Sitemap</a>
+                </li>
+                <li class="li"><a id="footer_bofa_advertising_practices" href="javascript:void(0);"
+                        class="spa-ui-layer-link spa-fn" rel="advertisingPracticesLayer"
+                        data-options="{&quot;rel&quot;:&quot;advertisingPracticesLayer&quot;}">Advertising
+                        Practices<span class="spa-ada-text ada-hidden">&nbsp;layer</span></a></li>
+                <li class="li"><a id="footer_bofa_feedback" href="javascript:void(0);">Feedback</a></li>
+                <li class="li"><a id="footer_bofa_view_full_online_banking_site"
+                        href="https://secure.bankofamerica.com/login/sign-in/signOnV2Screen.go?request_locale=en-us">View
+                        Full Online Banking Site</a></li>
+            </ul>
+        </span>
+        <div class="card-footer text-muted">
+            <div class="animated  zoomIn " style="color:black">
+                <i class="fab fa-facebook-square" style="font-size: 2em; color: white;"></i>
+                <i class="fab fa-instagram" style="font-size: 2em; color:white;"></i>
+                <i class="fab fa-linkedin" style="font-size: 2em; color: white;"></i>
+                <i class="fab fa-pinterest-square" style="font-size: 2em; color: white;"></i>
+                <i class="fab fa-twitter-square" style="font-size: 2em; color: white;"></i>
+                <i class="fab fa-youtube" style="font-size: 2em; color: white;"></i>
+            </div>
         </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <button type="submit" class="btn btn-primary" ><a href="/home.html" class= "login">Login</a></button>
-    </form>
-
+    </div>
 
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script
-  src="https://code.jquery.com/jquery-3.4.1.js"
-  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
         integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
         crossorigin="anonymous"></script>
