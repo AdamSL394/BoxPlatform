@@ -15,6 +15,10 @@ body{
 margin-left: 10px;
 margin-right: 10px;
 }
+.bannerTopAlignment{
+    margin-left:40px;
+    font-size: 18px;
+}
 .container{
     width: 1200px;
     margin: 0 auto;
@@ -24,21 +28,28 @@ margin-right: 10px;
     width:960px;
     margin:0 auto;
 }
+.overlay{
+    position: absolute;
+    width:960px;
+    margin:0 auto;
+    margin-left: -15px;
+}
  .form{
     width:30% !important;
     background-color: #F2F2F2;
     align-content: center;
     height:17rem;
+    margin-top: 30px;
 } 
 #user-email{
     margin-top:15px;
-    margin-left:15px;
-    width: 90%;
+    margin-left:10px;
+    width: 95%;
     border:1px solid lightgray;
 }
 #user-password{
-    margin-left:15px;
-    width: 90%;
+    margin-left:10px;
+    width: 95%;
     border:1px solid lightgray;
 }
 #emailText{
@@ -47,13 +58,25 @@ text-align: center !important;
 .login{
     color:white;
 }
-
 .btnAlign{
     margin-left: 3px;
     margin-bottom: 3px;
     background-color: transparent !important;
     color: black;
     border:1px solid white;
+}
+.form2{
+    width:235px;
+    padding:-30px !important;
+    background-color: #c41230;
+    position: absolute;
+    bottom: -30%;
+    margin-top:100px;
+    color:white;
+    font-size: 12px;
+}
+.atmLocator{
+    float: left;
 }
 .bottom{
     position: fixed;
