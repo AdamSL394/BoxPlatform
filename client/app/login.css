@@ -1,28 +1,37 @@
 body{
     background-color: white;
-
 }
 .d-block{
     height: 100vh;
 }
-.alert-light{
-    background-color: grey !important;
-    height:15px; 
-    position: fixed;
-    top:100%;
+.header{
+    text-align: center;
+    font-size: 14px;
+    width:960px;
+    margin:0 auto;
+    background-color: #F2F2F2;
+}
+.spaceForHeaderText{
+margin-left: 10px;
+margin-right: 10px;
 }
 .container{
     width: 1200px;
     margin: 0 auto;
-    margin-top: 5%;
     position: relative;
+}
+.middle{
+    width:960px;
+    margin:0 auto;
 }
  .form{
     width:30% !important;
     background-color: #F2F2F2;
     align-content: center;
+    height:17rem;
 } 
 #user-email{
+    margin-top:15px;
     margin-left:15px;
     width: 90%;
     border:1px solid lightgray;
