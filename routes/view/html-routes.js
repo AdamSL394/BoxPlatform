@@ -9,15 +9,10 @@ const folderId = '0'
 const resource = `https://api.box.com/2.0/folders/${folderId}`
 const client = sdk.getAppAuthClient('enterprise');
 
-router.get("/api/home", function (req, res, callback) {
-    console.log("hi ive been hit",res)
+router.get("/api/home", function (req, res) {
     client.exchangeToken(scopes, resource).then((tokenInfo) => {
         let accessToken = (tokenInfo.accessToken)
-        console.log(accessToken)
-        // res.render(accessToken) 
-        // res.render('contentExplorer', { at: tokenInfo.accessToken, fid: folderId });
         res.json(accessToken);
-        // res.sendFile(path.join(__dirname, "../../client/app/home.html"));
     }).catch((err) => {
         console.error(err);
     });

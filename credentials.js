@@ -4,34 +4,13 @@ const express = require("express")
 const PORT = process.env.PORT || 3000
 const app = express()
 const routes = require("./routes")
+const bodyParser = require('body-parser');
 
-// const boxSDK = require('box-node-sdk');
-// const configJSON = JSON.parse(fs.readFileSync('./config.json'));
-// const sdk = boxSDK.getPreconfiguredInstance(configJSON);
-// const scopes = 'base_preview item_download base_upload';
-// const folderId = '0'
-// const resource = `https://api.box.com/2.0/folders/${folderId}`
-// const client = sdk.getAppAuthClient('enterprise');
-
-// client.exchangeToken(scopes, resource).then((tokenInfo) => { 
-//   let accessToken = (tokenInfo.accessToken)
-//   console.log(accessToken)
-//   return accessToken
-// }, callback).catch((err) => {
-//   console.error(err);
-// });
-
-// app.set('views', './client/app');
-// app.set('view engine', 'pug');
-
-console.log("apppppp",app)
 app.use(express.static("client/app"));
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(routes)
 
-// clientId()
-// downscopeToken()
 function getAllClient() {
   client.users.get(client.CURRENT_USER_ID)
     .then(user => {

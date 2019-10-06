@@ -11,29 +11,40 @@ body{
     position: fixed;
     top:100%;
 }
- .glass{
-    width:30% !important;
-    height: 39% !important;
-    background-color: lightgray;
-    align-content: center;
-    border-radius: 5px 5px 5px 5px !important;
-} 
-#emailText{
-text-align: center !important;
-}
-.login{
-    color:white;
-}
 .container{
     width: 1200px;
     margin: 0 auto;
     margin-top: 5%;
     position: relative;
 }
+ .form{
+    width:30% !important;
+    background-color: #F2F2F2;
+    align-content: center;
+} 
+#user-email{
+    margin-left:15px;
+    width: 90%;
+    border:1px solid lightgray;
+}
+#user-password{
+    margin-left:15px;
+    width: 90%;
+    border:1px solid lightgray;
+}
+#emailText{
+text-align: center !important;
+}
+.login{
+    color:white;
+}
+
 .btnAlign{
     margin-left: 3px;
     margin-bottom: 3px;
-
+    background-color: transparent !important;
+    color: black;
+    border:1px solid white;
 }
 .bottom{
     position: fixed;
