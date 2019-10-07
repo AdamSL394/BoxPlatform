@@ -33,6 +33,11 @@ margin-right: 10px;
     width:960px;
     margin:0 auto;
     margin-left: -15px;
+   
+}
+.cover{
+    opacity: .5;
+    height:50px;
 }
  .form{
     width:30% !important;
@@ -43,12 +48,12 @@ margin-right: 10px;
 } 
 #user-email{
     margin-top:15px;
-    margin-left:10px;
+    margin-left:5px;
     width: 95%;
     border:1px solid lightgray;
 }
 #user-password{
-    margin-left:10px;
+    margin-left:5px;
     width: 95%;
     border:1px solid lightgray;
 }
@@ -59,6 +64,7 @@ text-align: center !important;
     color:white;
 }
 .btnAlign{
+    margin-top:20px;
     margin-left: 3px;
     margin-bottom: 3px;
     background-color: transparent !important;
@@ -68,12 +74,29 @@ text-align: center !important;
 .form2{
     width:235px;
     padding:-30px !important;
-    background-color: #c41230;
+    background: linear-gradient(#c41230,#8a2a2b);
     position: absolute;
     bottom: -30%;
     margin-top:100px;
     color:white;
     font-size: 12px;
+}
+#checkBox{
+    height: 25px;
+    width: 25px;
+    margin-left: 5px;
+}
+#saveId{
+    margin-right: 80px;
+}
+#saveId{
+  float: right;
+  font-size: 13px;  
+}
+#forgot{
+    font-size: 12px;
+    position: relative;
+    bottom: -10%;
 }
 .atmLocator{
     float: left;
@@ -103,3 +126,13 @@ ul{
     margin-top: 10px;
     margin-bottom: 5px;
 }
+
+.bannerTopAlignment:hover, .spaceForHeaderText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .bannerTopAlignment:hover, .spaceForHeaderText:hover {
+    text-decoration: underline;
+    cursor: pointer;
+  }

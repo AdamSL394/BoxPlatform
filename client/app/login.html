@@ -32,12 +32,13 @@
     <!-- Form -->
     <div class="row middle">
         <img src="https://www2.bac-assets.com/homepage/spa-assets/images/assets-images-global-logos-bac-logo-v2-CSX3648cbbb.svg"
-            style="height: 6rem !important;
-            width: 17rem; padding-left: 15px;">
+            style="height: 3rem !important;
+            width: 15rem; padding-left: 15px;">
     </div>
 
     <div class="row middle">
-        <div class="col col-xl-12">
+        <div class="col col-xl-12" style="
+        margin-bottom: 20px;">
             <span class="bannerTopAlignment">Checking</span>
             <span class="bannerTopAlignment">Savings</span>
             <span class="bannerTopAlignment">Business Services</span>
@@ -49,8 +50,28 @@
     </div>
 
     <div class="row middle container">
-        <img class="overlay"
-            src="https://media.brstatic.com/2018/01/22165942/bank-of-america-no-more-free-checking.jpg">
+
+                <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="overlay"
+                                src="https://media.brstatic.com/2018/01/22165942/bank-of-america-no-more-free-checking.jpg"
+                                class="d-block w-100" alt="...">
+                        </div>
+                        <!-- <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="...">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="..." class="d-block w-100" alt="..."> -->
+                        <!-- </div> -->
+                    </div>
+                </div>
+
+        <!-- <div class="cover">
+            <img class="overlay"
+                src="https://media.brstatic.com/2018/01/22165942/bank-of-america-no-more-free-checking.jpg">
+        </div> -->
+
         <form class="form col col-xl-3 col-lr-3" id="auth-form">
             <div class="form-group">
                 <input type="email" class="d-flex justify-content-center form-control" id="user-email"
@@ -60,12 +81,16 @@
                 <input type="password" class="form-control" id="user-password" placeholder="Password" required
                     minlength=6>
             </div>
+            <div class="checkbox">
+                <input id="checkBox" type="checkbox" aria-label="Checkbox for following text input">
+                <p id="saveId">Save Online Id</p>
+            </div>
             <button type="login" class="auth-btn btn btn-primary btnAlign"><a href="/home.html"
-                    class="signUp">Login</a>Employee</button>
+                    class="signUp">Employee</a></button>
             <button type="submit" class="auth-btn btn btn-primary btnAlign"><a href="/home.html"
                     class="login">Customer</a></button>
 
-            <p>Forgot ID/Passcorde?</p>
+            <p id="forgot">Forgot ID/Passcorde?</p>
 
 
         </form>
