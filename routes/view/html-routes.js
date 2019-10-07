@@ -10,6 +10,7 @@ const resource = `https://api.box.com/2.0/folders/${folderId}`
 const client = sdk.getAppAuthClient('enterprise');
 
 router.get("/api/home", function (req, res) {
+    console.log(client)
     client.exchangeToken(scopes, resource).then((tokenInfo) => {
         let accessToken = (tokenInfo.accessToken)
         res.json(accessToken);

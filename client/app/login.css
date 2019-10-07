@@ -29,7 +29,6 @@ margin-right: 10px;
     margin:0 auto;
 }
 .overlay{
-    position: absolute;
     width:960px;
     margin:0 auto;
     margin-left: -15px;
@@ -45,6 +44,7 @@ margin-right: 10px;
     align-content: center;
     height:17rem;
     margin-top: 30px;
+    position: absolute;
 } 
 #user-email{
     margin-top:15px;
@@ -72,13 +72,14 @@ text-align: center !important;
     border:1px solid white;
 }
 .form2{
-    width:235px;
-    padding:-30px !important;
+    width: 235px;
+    padding: -30px !important;
     background: linear-gradient(#c41230,#8a2a2b);
     position: absolute;
-    bottom: -30%;
-    margin-top:100px;
-    color:white;
+    bottom: 30%;
+    /* top: 50%; */
+    /* margin-top: 100px; */
+    color: white;
     font-size: 12px;
 }
 #checkBox{
@@ -99,7 +100,9 @@ text-align: center !important;
     bottom: -10%;
 }
 .atmLocator{
-    float: left;
+    float: right;
+    width: 90%;
+    margin-top: 10px;
 }
 .bottom{
     position: fixed;
@@ -127,7 +130,7 @@ ul{
     margin-bottom: 5px;
 }
 
-.bannerTopAlignment:hover, .spaceForHeaderText:hover {
+.bannerTopAlignment:hover, .spaceForHeaderText:hover, .atmLocator:hover, #forgot:hover, .checkbox:hover, i:hover {
     text-decoration: underline;
     cursor: pointer;
   }
