@@ -19,7 +19,6 @@ function getAllClient() {
     })
 }
 function uploadFilePromise() {
-
   var stream = fs.createReadStream('/Users/adam/Desktop/Desktop/CoverLetter.docx');
   var folderID = "0";
   client.files.uploadFile(folderID, 'Name1', stream)

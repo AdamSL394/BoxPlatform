@@ -26,9 +26,10 @@
     <script>
 
         // function calltogetAccessToken(req,res){
-            
+      
         $(document).on("ready", function (req, res) {
-            $.get("/api/home", function (req,res) {
+            console.log("dis request",req)
+            $.get("/client", function (req,res) {
             }).then(function (response) {
                 var folderId = '0';
                 var accessToken = `${response}`;

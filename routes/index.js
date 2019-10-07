@@ -1,13 +1,13 @@
 var router = require("express").Router();
 // var path = require("path");
 
-// const apiRoutes = require("./view/passport.js")
+const clientRoutes = require("./view/client-routes.js")
 var viewRoutes = require("./view/html-routes.js");
 
 
 // html routes
 router.use('/', viewRoutes);
-// router.use("/api/",apiRoutes)
+// router.use("/client",clientRoutes)
 
 
 // catch all
