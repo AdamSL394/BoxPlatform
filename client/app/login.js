@@ -34,28 +34,32 @@
 //     }
 // });
 
-function signup(payload) {
-    $.post('/api/signup', payload, function (response) {
-        console.log(payload)
-        console.log(response);
-        if (response.success) {
-            location.reload();
-        }
-        else {
-            displayMSG(response);
-        }
-    });
-}
+// function signup(payload) {
+//     $.post('/api/signup', payload, function (response) {
+//         console.log(payload)
+//         console.log(response);
+//         if (response.success) {
+//             location.reload();
+//         }
+//         else {
+//             displayMSG(response);
+//         }
+//     });
+// }
 
-function login(payload) {
-    $.post('/api/auth/login', payload, function (response) {
-        console.log(payload)
-        console.log(response);
-        if (response.success) {
-            location.reload();
-        }
-        else {
-            displayMSG(response);
-        }
-    });
-}
+// function login(payload) {
+//     $.post('/api/auth/login', payload, function (response) {
+//         console.log(payload)
+//         console.log(response);
+//         if (response.success) {
+//             location.reload();
+//         }
+//         else {
+//             displayMSG(response);
+//         }
+//     });
+// }
+
+$(".login").on("click", function (req, res){
+    let a = ($("#user-email").val())
+})

@@ -26,7 +26,16 @@ router.get("/client", function (req, res,callback) {
         }).catch((err) => {
             console.error(err);
         });
+
 });
+
+router.post("/client:id",function(req,res){
+    console.log("make me dynamic",req)
+    client.folders.create('0', 'make me dynamic1')
+    .then(folder => {
+        res.send(folder.id)
+    })
+})
 
 router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "../../client/app/login.html"));
