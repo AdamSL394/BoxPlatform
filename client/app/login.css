@@ -61,7 +61,10 @@ margin-right: 10px;
 text-align: center !important;
 }
 .login{
-    color:white;
+    color:#012269;
+}
+.signUp{
+    color:#012269;
 }
 .btnAlign{
     margin-top:20px;
@@ -72,11 +75,11 @@ text-align: center !important;
     border:1px solid white;
 }
 .form2{
-    width: 235px;
+    width: 240px;
     padding: -30px !important;
     background: linear-gradient(#c41230,#8a2a2b);
     position: absolute;
-    bottom: 30%;
+    bottom: 28%;
     /* top: 50%; */
     /* margin-top: 100px; */
     color: white;

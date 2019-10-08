@@ -41,10 +41,11 @@ router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "../../client/app/login.html"));
 })
 
+
 function getAllClient() {
     client.users.get(client.CURRENT_USER_ID)
         .then(user => {
-            console.log('Hello', user.name, '!')
+            console.log('Hello', user, '!')
             // .catch(err => console.log('Got an error!', err));
         })
 }
@@ -88,10 +89,10 @@ function clientId() {
             return autoPage(usersIterator);
         })
         .then((collection) => {
-            // let a = (collection);
-            // console.log(a)
+            let a = (collection);
+            console.log(a)
             // uploadFilePromise(a)
-        }, callback);
+        });
 
     function autoPage(iterator) {
         let collection = [];
@@ -111,5 +112,6 @@ function clientId() {
         return moveToNextItem();
     }
 }
+
 
 module.exports = router;
