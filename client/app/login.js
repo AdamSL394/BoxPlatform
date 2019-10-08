@@ -60,9 +60,16 @@
 //     });
 // }
 
+let random = 0
+let userPassword=""
 
-$(".login").on("click", function (req, res){
+function anotherFile(){
+      random = (Math.random()*100)
+    // console.log(random)
+}
+anotherFile()
+
+$(document).on("click",".login", random, function (req,res){
     let emailName = $("#user-email").val()
-    console.log(emailName)
     localStorage.setItem("email", emailName);
 })

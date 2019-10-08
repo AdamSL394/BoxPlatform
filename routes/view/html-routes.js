@@ -26,12 +26,11 @@ router.get("/client", function (req, res,callback) {
         }).catch((err) => {
             console.error(err);
         });
-
 });
 
 router.post(`/client:id`,function(req,res){
     let a = (Object.values(req.params))
-    console.log (a)
+    console.log(a)
     client.folders.create('0', `${a}`)
     .then(folder => {
         res.send(folder.id)
