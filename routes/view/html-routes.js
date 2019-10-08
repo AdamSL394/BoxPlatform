@@ -29,9 +29,10 @@ router.get("/client", function (req, res,callback) {
 
 });
 
-router.post("/client:id",function(req,res){
-    console.log("make me dynamic",req)
-    client.folders.create('0', 'make me dynamic1')
+router.post(`/client:id`,function(req,res){
+    let a = (Object.values(req.params))
+    console.log (a)
+    client.folders.create('0', `${a}`)
     .then(folder => {
         res.send(folder.id)
     })

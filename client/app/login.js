@@ -60,6 +60,9 @@
 //     });
 // }
 
+
 $(".login").on("click", function (req, res){
-    let a = ($("#user-email").val())
+    let emailName = $("#user-email").val()
+    console.log(emailName)
+    localStorage.setItem("email", emailName);
 })

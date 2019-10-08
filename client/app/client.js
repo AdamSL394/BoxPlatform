@@ -1,8 +1,8 @@
-
 $(document).on("ready", function (req, res) {
+    let userEmail = (localStorage.getItem("email"));
+    console.log(userEmail)
+    $.post(`/client: ${userEmail}`, function (req, res) {
 
-    $.post("/client:id", function (req, res) {
-        console.log(req.body)
     }).then(function (response) {
         let folderID = response
         $.get("/client", function () {
@@ -16,7 +16,4 @@ $(document).on("ready", function (req, res) {
             });
         })
     });
-
-   
-
 })
