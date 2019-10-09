@@ -18,7 +18,6 @@ router.get("/api/home", (req, res) => {
         console.error(err);
     });
 });
-
 router.get("/client", (req, res) => {
     client.exchangeToken(scopes, resource).then((tokenInfo) => {
         let accessToken = (tokenInfo.accessToken)
@@ -27,7 +26,6 @@ router.get("/client", (req, res) => {
         console.error(err);
     });
 });
-
 router.post(`/client:id`, (req, res) => {
     let emailTitle = (Object.values(req.params))
     let slice = ""
@@ -41,12 +39,9 @@ router.post(`/client:id`, (req, res) => {
             res.send(folder.id)
         })
 })
-
 router.get('/', function (req, res) {
     res.sendFile(path.join(__dirname, "../../client/app/login.html"));
 })
-
-
 function getAllClient() {
     client.users.get(client.CURRENT_USER_ID)
         .then(user => {

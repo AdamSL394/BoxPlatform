@@ -30,13 +30,27 @@ margin-right: 10px;
 }
 .overlay{
     width:960px;
+    height:90%;
     margin:0 auto;
     margin-left: -15px;
-   
+    /* position: relative; */
 }
+/* .overylay:after{
+        content: " ";
+        z-index: 10;
+        display: block;
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        opacity: .5;
+        border:2px solid red
+} */
 .cover{
-    opacity: .5;
-    height:50px;
+    /* position:absolute; */
+    /* left:0; */
+    background: rgba(255,255,255,.5);
 }
  .form{
     width:30% !important;
@@ -131,6 +145,7 @@ li{
 ul{
     margin-top: 10px;
     margin-bottom: 5px;
+    padding-left: 0px;
 }
 
 .bannerTopAlignment:hover, .spaceForHeaderText:hover, .atmLocator:hover, #forgot:hover, .checkbox:hover, i:hover {
