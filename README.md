@@ -1,4 +1,4 @@
-# BoxPlatform
+#BoxPlatform
 
 Need help updating your business? Uploading sensitive information and allowing a company to review you paperwork? 
 
@@ -11,7 +11,7 @@ The Bank of America employee can then go and log in be granted acce
 This layers the box technology behind the scenes and allows the company Bank Of America to stay with the same authentication method for verifying user accounts as is used on their home website. Once logged in we are verified to use Bank of Americas Box account. 
 
 
-## Built with:
+##Built with:
 <ol>
 <li> HTML 
 <li> CSS 
