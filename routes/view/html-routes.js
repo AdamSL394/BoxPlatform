@@ -9,7 +9,7 @@ const folderId = '0'
 const resource = `https://api.box.com/2.0/folders/${folderId}`
 const client = sdk.getAppAuthClient('enterprise');
 
-router.get("/api/home", function (req, res) {
+router.get("/api/home", (req, res) => {
     createAppUser()
     client.exchangeToken(scopes, resource).then((tokenInfo) => {
         let accessToken = (tokenInfo.accessToken)
@@ -19,22 +19,27 @@ router.get("/api/home", function (req, res) {
     });
 });
 
-router.get("/client", function (req, res,callback) {
-        client.exchangeToken(scopes, resource).then((tokenInfo) => {
-            let accessToken = (tokenInfo.accessToken)
-            res.json(accessToken);
-        }).catch((err) => {
-            console.error(err);
-        });
+router.get("/client", (req, res) => {
+    client.exchangeToken(scopes, resource).then((tokenInfo) => {
+        let accessToken = (tokenInfo.accessToken)
+        res.json(accessToken);
+    }).catch((err) => {
+        console.error(err);
+    });
 });
 
-router.post(`/client:id`,function(req,res){
-    let a = (Object.values(req.params))
-    console.log(a)
-    client.folders.create('0', `${a}`)
-    .then(folder => {
-        res.send(folder.id)
-    })
+router.post(`/client:id`, (req, res) => {
+    let emailTitle = (Object.values(req.params))
+    let slice = ""
+    for (let i = 0; i < emailTitle.length; i++) {
+        slice = (emailTitle[i].split(""))
+        slice.splice(0, 2)
+    }
+    let emailName = slice.join("")
+    client.folders.create('0', `${emailName}`)
+        .then(folder => {
+            res.send(folder.id)
+        })
 })
 
 router.get('/', function (req, res) {

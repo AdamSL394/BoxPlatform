@@ -1,5 +1,6 @@
 $(document).on("ready", function (req, res) {
     let userEmail = (localStorage.getItem("email"));
+    console.log("client js",userEmail)
     $.post(`/client: ${userEmail}`, function (req, res) {
     }).then(function (response) {
         let folderID = response
